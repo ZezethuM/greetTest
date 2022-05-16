@@ -6,9 +6,10 @@ describe('Greet Factory function', function(){
             myName.setName("Zeze");
             assert.deepEqual(["Zeze"], myName.getNames());
         });
-        it('It should return enter name if empty string is passed', function(){
+        it('It should return enter a valid name if empty string/ name with numbers/special characters is passed', function(){
             const myName = greeting();
             assert.equal("Enter a valid Name", myName.greetMassage("Isixhosa",""));
+            assert.equal("Enter a valid Name", myName.greetMassage("Isixhosa","123"));
         });
         it('It should return language not checked if greeted without a language', function(){
             const myName = greeting();
