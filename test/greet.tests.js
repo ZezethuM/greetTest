@@ -20,7 +20,7 @@ describe('Greet Factory function', function(){
 describe("It should be able to greet in defferent languages", function(){
     it('It should return a greeting in the selected language with the name', function(){
         const myName = greeting();
-        assert.equal("Hello, Liya", myName.greetMassage("English","liya"));
+        assert.equal("Hello, Zezethu", myName.greetMassage("English","Zezethu"));
     });
     it('It should return a greeting in the selected language with the name', function(){
         const myName = greeting();
