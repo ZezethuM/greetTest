@@ -4,7 +4,9 @@ function greeting(list) {
     let regexo = /^[a-zA-Z]{3,}$/g;
 
     function setName(name) {
-            theName.push(name);  
+            if(!theName.includes(name)){
+                theName.push(name);  
+            }
     }
     function greetMassage(langu, name) {
 
@@ -17,9 +19,9 @@ function greeting(list) {
             return "Language not checked"
         }
         if (theName.includes(newName)){
+            setName(newName);
                 return "Already greeted enter a new Name";
         } else {
-            setName(newName);
             if (langu === "Isixhosa"){
                 return "Molo, " + newName
             }
